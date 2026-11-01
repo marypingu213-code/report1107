@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>特殊教育教師與生成式AI協作開發差異化漢字識字教材的設計歷程｜期末報告</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <marker id="ah" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#6B7A90"/></marker>
+</svg>
+
+<div id="stage"><div id="deck" role="region" aria-label="簡報">
+<div class="progress"></div>
+
+<!-- 1 封面 -->
+<section class="slide cover">
+  <div class="ctext">
+    <div class="kicker">碩士論文研究計畫・期末報告</div>
+    <h1>特殊教育教師與<span class="pk">生成式AI</span><br>協作開發差異化<br>漢字識字教材的設計歷程</h1>
+    <div class="meta"><b>報告人：林宛儀</b><br>南臺科技大學 教育經營研究所<br>115 年 11 月 7 日</div>
+  </div>
+  <div class="cover-art" aria-hidden="true">
+    <svg viewBox="0 0 520 900" width="520" height="900">
+      <g fill="none" stroke="rgba(255,255,255,.16)" stroke-width="1.5">
+        <circle cx="430" cy="210" r="120"/><circle cx="430" cy="210" r="190"/><circle cx="430" cy="210" r="260"/>
+        <path d="M0 640 L520 380"/><path d="M0 700 L520 440"/><path d="M0 760 L520 500"/>
+      </g>
+      <path d="M60 820 H200" stroke="#7FC4BE" stroke-width="3"/>
+      <g fill="rgba(255,255,255,.35)"><circle cx="60" cy="120" r="3"/><circle cx="90" cy="120" r="3"/><circle cx="120" cy="120" r="3"/><circle cx="60" cy="150" r="3"/><circle cx="90" cy="150" r="3"/><circle cx="120" cy="150" r="3"/></g>
+    </svg>
+  </div>
+  <aside class="notes"><p>各位老師、同學好，我是林宛儀。今天報告的題目是〈特殊教育教師與生成式 AI 協作開發差異化漢字識字教材的設計歷程〉。</p><p>這份研究的主角其實是「我自己」——一位資源班老師，如何用特教專業去引導 AI，一起做出學生用得上的教材。</p></aside>
+</section>
+
+<!-- 2 研究背景 -->
+<section class="slide">
+  <div class="kicker">研究背景</div>
+  <h2>學生寫字卡在<span class="hl">部件</span>；老師自編教材<span class="hl">很花時間</span></h2>
+  <div class="row grow" style="gap:40px">
+    <div class="card pink" style="flex:1.15">
+      <h3><span class="num pink">1</span>學生的書寫困難</h3>
+      <ul class="clean" style="margin-bottom:10px">
+        <li>錯別字、字體忽大忽小</li>
+        <li>部件<b>位置與大小</b>配置不當</li>
+        <li>部件錯誤</li>
+        <li>常伴隨挫折、退縮，依賴老師提示</li>
+      </ul>
+      <div class="cite">（李瑩玓，2004）</div>
+    </div>
+    <div class="card sky" style="flex:1">
+      <h3><span class="num sky">2</span>老師的負擔</h3>
+      <ul class="clean sky">
+        <li>資源班教材<b>以自編為主</b></li>
+        <li>但編製耗時、資源與支持不足</li>
+        <li>還要寫 IEP、心評報告</li>
+      </ul>
+      <div class="cite">（曾瓊瑩等人，2007）</div>
+      <div style="margin-top:26px;font-size:34px;font-weight:800" class="sk">→ 時間＋設計的雙重負擔</div>
+    </div>
+  </div>
+  
+  <aside class="notes"><p>我在資源班任教約 15 年，常看到學生寫字時出現錯別字、字忽大忽小、部件位置與大小放錯，或直接寫錯部件（李瑩玓，2004）。這些困難常伴隨挫折與退縮。</p><p>另一方面，資源班老師的教材多半自己編，但編教材很花時間，又沒有足夠的資源；加上 IEP、心評報告等工作，自編教材就變成時間和設計上的雙重負擔（曾瓊瑩等人，2007）。</p></aside>
+</section>
+
+<!-- 3 為什麼用貼紙 -->
+<section class="slide">
+  <div class="kicker">設計理念</div>
+  <h2>為什麼用<span class="hl">貼紙</span>，不用平板？</h2>
+  <div class="row" style="align-items:center;gap:22px">
+    <div class="card mint" style="flex:1;text-align:center">
+      <div class="chip mint" style="font-size:28px">教師端・數位</div>
+      <div style="font-size:36px;font-weight:800;margin:16px 0 8px">與生成式 AI 協作<br>做出網頁工具</div>
+      <div class="small">批次列印部件貼紙＋學習單</div>
+    </div>
+    <div class="arrow" style="flex-direction:column;font-size:26px;color:var(--ink2)"><span style="font-size:56px;color:#9AA5B4">➜</span>列印</div>
+    <div class="card pink" style="flex:1.35;text-align:center">
+      <div class="chip pink" style="font-size:28px">學生端・實體操作</div>
+      <div class="row" style="gap:8px;justify-content:center;margin-top:18px;align-items:center">
+        <div class="box" style="font-size:30px;padding:16px 14px">部件<br>辨識</div><span class="arrow" style="font-size:36px">›</span>
+        <div class="box" style="font-size:30px;padding:16px 14px">拼貼<br>組合</div><span class="arrow" style="font-size:36px">›</span>
+        <div class="box" style="font-size:30px;padding:16px 14px">書寫<br>練習</div><span class="arrow" style="font-size:36px">›</span>
+        <div class="box" style="font-size:30px;padding:16px 14px">語詞<br>應用</div>
+      </div>
+    </div>
+  </div>
+  <div class="row" style="margin-top:28px;gap:28px">
+    <div class="card butter" style="flex:1;padding:20px 26px">
+      <p style="margin:0;font-size:28px">起點：一年級自閉症學生 S1，<b>不想太早給他用平板</b><br><span class="small">參考「雄筆順」：教師可依學生需求自製數位工具（顏國雄，2017）</span></p>
+    </div>
+    <div class="card sky" style="flex:1;padding:20px 26px">
+      <p style="margin:0;font-size:26px;line-height:1.45">Karolinska Institutet（2023）提醒數位工具可能削弱學習效果<br><span class="chip sky" style="font-size:20px;margin-top:6px">專家審查意見（提交瑞典教育部）・非實證研究</span></p>
+    </div>
+  </div>
+  
+  <div class="card" style="margin-top:28px;text-align:center;font-size:36px;font-weight:900;padding:20px">數位<span class="mt">留給老師</span>做教材，實體操作<span class="pk">留給學生</span></div>
+  <aside class="notes"><p>這套教材最初是為一位一年級自閉症學生 S1 設計的。考量他年紀還小，我不希望太早讓他用平板，所以改用實體貼紙拼部件。構想時參考了顏國雄（2017）自製的「雄筆順」，讓我體會到老師也能依學生需求自己設計工具。</p><p>Karolinska Institutet（2023）對瑞典國家學校數位化策略提出聲明，提醒數位工具可能削弱學習效果。要特別說明：這是提交給瑞典教育部的專家審查意見，不是實證研究，我只把它當作一個提醒。</p><p>核心原則一句話：數位留給老師做教材，實體操作留給學生。</p></aside>
+</section>
+
+<!-- 4 動機與缺口 -->
+<section class="slide">
+  <div class="kicker">研究動機</div>
+  <h2>動機與<span class="hl">研究缺口</span></h2>
+  <div class="grid3 grow" style="align-items:start">
+    <div class="card pink">
+      <h3><span class="num pink">1</span>實務困境</h3>
+      <ul class="clean"><li>市售教材難對應<b>個別化</b>需求</li><li>自製教材費時、有技術門檻</li></ul>
+    </div>
+    <div class="card butter">
+      <h3><span class="num butter">2</span>關鍵發現</h3>
+      <ul class="clean butter"><li>AI 輸出品質取決於<b>老師怎麼問、怎麼引導</b></li><li>「如何與 AI 對話」值得被記錄</li></ul>
+    </div>
+    <div class="card mint">
+      <h3><span class="num mint">3</span>研究缺口</h3>
+      <ul class="clean mint"><li>既有研究多談 AI 技術、應用類型與政策</li><li><b>以特教教師為主體</b>、記錄協作歷程者仍缺乏</li></ul>
+      <div class="cite">Zhai et al., 2021；Huang et al., 2021；Chan, 2023</div>
+    </div>
+  </div>
+  <div class="card" style="text-align:center;font-size:32px;font-weight:800;padding:18px;margin-top:24px">把「人引導機器」的歷程<span class="pk">顯性化</span>：不是被 AI 取代，而是以特教專業引領 AI</div>
+  
+  <aside class="notes"><p>動機有三層。第一是實務困境：市售教材對不到資源班學生高度個別化的需求，自己做又很花時間、有技術門檻。</p><p>第二是我在實作中的發現：同樣的需求，問法不同、修正指令不同，AI 給的結果就差很多，所以「怎麼跟 AI 對話」本身就是一種專業實踐。</p><p>第三是研究缺口：過去 AI 教育研究多聚焦技術與應用類型（Zhai et al., 2021；Huang et al., 2021），生成式 AI 普及後則多談機構政策（Chan, 2023）；以特教老師為主體、系統記錄協作歷程的研究仍相當缺乏。</p></aside>
+</section>
+
+<!-- 5 目的與待答問題 -->
+<section class="slide">
+  <div class="kicker">研究目的與待答問題</div>
+  <h2>三個<span class="hl">待答問題</span></h2>
+  <div style="display:flex;flex-direction:column;gap:28px">
+    <div class="card pink row" style="align-items:center;gap:24px;padding:26px 30px">
+      <span class="num pink" style="width:64px;height:64px;font-size:32px">一</span>
+      <div><p style="margin:0;font-size:34px">特殊教育教師如何運用特教專業，引導生成式 AI 將學生的學習需求轉化為漢字部件拼貼教材？</p><span class="chip pink" style="font-size:20px;margin-top:6px">目的：探討引導歷程</span></div>
+    </div>
+    <div class="card butter row" style="align-items:center;gap:24px;padding:26px 30px">
+      <span class="num butter" style="width:64px;height:64px;font-size:32px">二</span>
+      <div><p style="margin:0;font-size:34px">在人機協作過程中，教師如何處理 AI 之回應並提出修正指令？其決策依據為何？</p><span class="chip butter" style="font-size:20px;margin-top:6px">目的：分析回應處理與決策依據</span></div>
+    </div>
+    <div class="card mint row" style="align-items:center;gap:24px;padding:26px 30px">
+      <span class="num mint" style="width:64px;height:64px;font-size:32px">三</span>
+      <div><p style="margin:0;font-size:34px">教師的特教專業在 AI 協作開發自編教材中發揮哪些關鍵作用？可歸納出何種實踐模式？</p><span class="chip mint" style="font-size:20px;margin-top:6px">目的：歸納關鍵作用與實踐模式</span></div>
+    </div>
+  </div>
+  
+  <aside class="notes"><p>研究目的有三：一、探討特殊教育教師運用特教專業引導生成式 AI 開發漢字部件拼貼教材之歷程；二、分析教師在人機協作過程中 AI 回應與提出修正指令之方式及其決策依據；三、歸納教師特教專業在 AI 協作開發自編教材中所發揮之關鍵作用，以提供特教教師參考之實踐模式。</p><p>對應的三個待答問題如投影片所示（原文照錄）。簡單說：第一題看「怎麼引導」，第二題看「怎麼處理 AI 的回應」，第三題看「特教專業的關鍵作用」。</p></aside>
+</section>
+
+<!-- 6 名詞釋義 -->
+<section class="slide">
+  <div class="kicker">名詞釋義</div>
+  <h2>四個<span class="hl">關鍵名詞</span></h2>
+  <div class="grid2 grow">
+    <div class="card pink">
+      <h3><span class="chip pink" style="font-size:30px">生成式 AI</span></h3>
+      <p style="margin:0;font-size:29px">依自然語言提示<b>自動產生內容</b>；輸出仍需專業的人判斷</p>
+      <p class="small" style="margin:8px 0 0">本研究：Gemini、Claude、ChatGPT（UNESCO, 2023/2025）</p>
+    </div>
+    <div class="card butter">
+      <h3><span class="chip butter" style="font-size:30px">人機協作</span></h3>
+      <p style="margin:0;font-size:29px">機器依人的輸入操作，人再<b>依結果調整</b></p>
+      <p class="small" style="margin:8px 0 0">本研究：多輪對話、檢視輸出、下修正指令（Costa et al., 2022，引自丁玉珍，2024）</p>
+    </div>
+    <div class="card mint">
+      <h3><span class="chip mint" style="font-size:30px">漢字部件</span></h3>
+      <p style="margin:0;font-size:29px">由筆畫組成、能<b>組配漢字</b>的構字單位；分成字／非字部件</p>
+      <p class="small" style="margin:8px 0 0">本研究：拆解生字作為拼貼素材（莊德明、鄧賢瑛，2009）</p>
+    </div>
+    <div class="card sky">
+      <h3><span class="chip sky" style="font-size:30px">自編教材</span></h3>
+      <p style="margin:0;font-size:29px">教師依課程需求「<b>編</b>」或「<b>寫</b>」的教材</p>
+      <p class="small" style="margin:8px 0 0">本研究：與 AI 協作產出的部件貼紙＋學習單（陳伯璋等人，2016）</p>
+    </div>
+  </div>
+  
+  <aside class="notes"><p>生成式 AI：依使用者提示自動產生文本、圖像、程式碼等內容，但它不真正理解世界，輸出需要專業的人來評估（UNESCO, 2023/2025）。本研究指 Gemini、Claude、ChatGPT。</p><p>人機協作：機器依人的輸入操作，人再依機器的結果調整（Costa et al., 2022，引自丁玉珍，2024）。本研究指我透過多輪對話提出需求、檢視輸出、下修正指令。</p><p>漢字部件：由筆畫組成、具組配漢字功能的構字單位，分成字部件與非字部件（莊德明、鄧賢瑛，2009）。</p><p>自編教材：「編」是組織現成材料，「寫」是自行撰寫（陳伯璋等人，2016）。本研究指與 AI 協作開發、依單元與人數批次產出的部件貼紙與學習單。</p></aside>
+</section>
+
+<!-- 6b 為什麼選行動研究 -->
+<section class="slide">
+  <div class="kicker">研究方法</div>
+  <h2>為什麼選<span class="hl">行動研究</span>？</h2>
+  <div class="grid2 grow">
+    <div style="padding:30px 34px" class="card pink">
+      <h3 style="font-size:36px;margin-bottom:18px"><span class="num pink">1</span>問題源自自身教學現場</h3>
+      <p style="margin:0;font-size:33px;line-height:1.55">學生書寫常缺漏筆畫、部件誤用；市售教材難對應，自編受限於時間與技術</p>
+    </div>
+    <div style="padding:30px 34px" class="card butter">
+      <h3 style="font-size:36px;margin-bottom:18px"><span class="num butter">2</span>研究對象是研究者本人</h3>
+      <p style="margin:0;font-size:33px;line-height:1.55">探討的是<b>設計歷程</b>，不是學生學習成效；引導與判斷屬教師內在的專業思考</p>
+    </div>
+    <div style="padding:30px 34px" class="card mint">
+      <h3 style="font-size:36px;margin-bottom:18px"><span class="num mint">3</span>開發本身就是反覆循環</h3>
+      <p style="margin:0;font-size:33px;line-height:1.55">三個 AI 階段＋兩次試用，每次修改都依前次試用或測試調整，並留有 GitHub 紀錄</p>
+    </div>
+    <div style="padding:30px 34px" class="card sky">
+      <h3 style="font-size:36px;margin-bottom:18px"><span class="num sky">4</span>實驗、調查研究不適合</h3>
+      <p style="margin:0;font-size:33px;line-height:1.55">教材持續變動，無法作固定處理；調查難以呈現<b>單一教師每一回合</b>的判斷</p>
+    </div>
+  </div>
+  <aside class="notes"><p>選擇行動研究的理由有四。第一，研究問題源自自身的教學現場：部分學生能認讀國字，書寫時卻常缺漏筆畫或部件誤用；市售教材難以對應學生高度異質的需求，自編教材又受限於時間與技術門檻。這個困境由我在自身情境中發現，也須由我在自身情境中嘗試解決。</p><p>第二，研究對象是我本人的設計歷程，而非學生的學習成效。我如何引導 Gemini、Claude 與 ChatGPT，如何處理 AI 的回應並作出決策，屬於教師內在的專業思考，只有以自身為研究對象，並以當下紀錄與事後反思相互對照，才能呈現。</p><p>第三，教材的開發本身就是反覆循環：自 115 年 4 月起歷經三個開發階段，加上 5/8 低年級試用與 9 月起的中年級試用逐步修正，每次修改都留有 GitHub 版本紀錄，也都是依前一次試用或測試的結果調整，與「計畫、行動、觀察、反思」的循環相互對應。</p><p>第四，實驗研究需控制變項、比較處理效果，但本研究不以學習成效為範圍，教材也持續變動，無法作為固定的實驗處理；調查研究適合蒐集多數人的意見，難以呈現單一教師在每一回合協作中的引導與判斷。</p></aside>
+</section>
+
+<!-- 7 行動研究小循環 -->
+<section class="slide">
+  <div class="kicker">研究方法</div>
+  <h2>行動研究：每一回合都是<span class="hl">一個小循環</span></h2>
+  <div class="row grow" style="gap:30px;align-items:center">
+    <div style="position:relative;width:760px;height:640px;flex:none;margin-top:-20px">
+      <svg width="760" height="640" viewBox="0 0 760 640" style="position:absolute;inset:0">
+        <circle cx="380" cy="320" r="235" fill="none" stroke="#D5DBE3" stroke-width="4" stroke-dasharray="4 14" stroke-linecap="round"/>
+        <g fill="none" stroke="#7D8BA0" stroke-width="7" stroke-linecap="round" marker-end="url(#ah)">
+          <path d="M514.8 127.5A235 235 0 0 1 572.5 185.2"/>
+          <path d="M572.5 454.8A235 235 0 0 1 514.8 512.5"/>
+          <path d="M245.2 512.5A235 235 0 0 1 187.5 454.8"/>
+          <path d="M187.5 185.2A235 235 0 0 1 245.2 127.5"/>
+        </g>
+      </svg>
+      <div class="box" style="position:absolute;left:255px;top:30px;width:250px;border-color:var(--pink);background:var(--pink-l)">1. 計畫<small>形成給 AI 的需求<br>或修正指令</small></div>
+      <div class="box" style="position:absolute;left:490px;top:265px;width:250px;border-color:var(--sky);background:var(--sky-l)">2. 行動<small>AI 產出或修改程式<br>上傳至 GitHub</small></div>
+      <div class="box" style="position:absolute;left:255px;top:500px;width:250px;border-color:var(--mint);background:var(--mint-l)">3. 觀察<small>列印並讓學生試用<br>記錄操作與誤差</small></div>
+      <div class="box" style="position:absolute;left:20px;top:265px;width:250px;border-color:var(--butter);background:var(--butter-l)">4. 反思<small>判斷採用、修正<br>或捨棄 AI 的回應</small></div>
+      <div style="position:absolute;left:290px;top:262px;width:180px;text-align:center">
+        <div style="font-size:40px;line-height:1;color:var(--mint-d);margin-bottom:6px">↻</div>
+        <div style="font-size:26px;font-weight:800;line-height:1.35">成為下一回合<br>計畫的依據</div>
+      </div>
+    </div>
+    <div style="flex:1;display:flex;flex-direction:column;gap:22px">
+      <div class="card"><p style="margin:0;font-size:29px"><b>計畫→行動→觀察→反思</b></p><p class="cite" style="margin:6px 0 0">自我反思的螺旋（Kemmis 等人，2014）</p></div>
+      <div class="card pink"><p style="margin:0;font-size:29px">不是「一大輪」，<br>而是發生在<b>每一回合</b>的協作裡</p></div>
+      <div class="card mint"><p style="margin:0;font-size:29px">Gemini・Claude・ChatGPT<br>三階段＝<b>小循環的累積</b></p><p class="small" style="margin:8px 0 0">例：5/8 試用未達預期 → 轉給中年級<br>9/22–9/25 試作缺件補字 → 還原 9/14 版</p></div>
+    </div>
+  </div>
+  
+  <aside class="notes"><p>Kemmis 等人（2014）把行動研究描述為自我反思的螺旋：計畫、行動並觀察、反思，再重新計畫，如此循環；實際歷程也很少那麼整齊，各階段常相互重疊。</p><p>在本研究中，循環不是一大輪，而是發生在每一回合的協作裡（圖 3-1）：計畫——依學生需求、材料規格或前次試用結果，形成給 AI 的需求或修正指令；行動——AI 產出或修改程式，我再上傳到 GitHub；觀察——實際列印貼紙與學習單、讓學生試用，記錄操作情形、誤差或錯誤；反思——判斷要採用、修正或捨棄 AI 的回應，這個判斷又成為下一回合計畫的依據。</p><p>三個開發階段就是這些小循環累積而成。例如 5/8 低年級試用未達預期，我反思學生當下的操作能力後轉給中年級；9/22 到 9/25 試作缺件補字後，判斷介面過於複雜，還原為 9/14 的版本並停止擴充功能。</p></aside>
+</section>
+
+<!-- 8 研究架構 -->
+<section class="slide">
+  <div class="kicker">研究架構</div>
+  <h2>四類引導 × <span class="hl">採用／修正／捨棄</span></h2>
+  <div style="position:relative;flex:1">
+    <div class="row" style="gap:0;align-items:center;margin-top:30px">
+      <div class="box" style="width:190px;border-color:var(--pink);background:var(--pink-l)">學生的<br>學習需求</div>
+      <div class="arrow" style="width:46px">➜</div>
+      <div class="card" style="width:420px;padding:18px 20px;border-color:#C9D1DC">
+        <div style="text-align:center;font-size:28px;font-weight:800;margin-bottom:12px">教師（特教專業）<br><span style="font-size:22px;color:var(--ink2);font-weight:600">提供四類引導</span></div>
+        <div class="grid2" style="gap:10px">
+          <span class="chip pink" style="font-size:26px;padding:8px">教學需求</span>
+          <span class="chip butter" style="font-size:26px;padding:8px">實體材料規格</span>
+          <span class="chip mint" style="font-size:26px;padding:8px">實際操作回饋</span>
+          <span class="chip sky" style="font-size:26px;padding:8px">技術操作諮詢</span>
+        </div>
+      </div>
+      <div class="arrow" style="width:46px">➜</div>
+      <div class="box" style="width:196px;border-color:var(--sky);background:var(--sky-l)">AI<br>產出／修改<br>程式</div>
+      <div class="arrow" style="width:46px">➜</div>
+      <div class="box" style="width:196px;border-color:var(--mint);background:var(--mint-l)">列印・<br>學生試用</div>
+      <div class="arrow" style="width:46px">➜</div>
+      <div class="box" style="width:220px;border-color:var(--butter);background:var(--butter-l)">教師判斷<small style="font-size:24px;font-weight:700;color:var(--ink)">採用<br>修正<br>捨棄</small></div>
+    </div>
+    <svg width="1408" height="120" viewBox="0 0 1408 120" style="position:absolute;left:0;top:300px">
+      <path d="M1298 8 V60 Q1298 84 1274 84 H470 Q446 84 446 60 V14" fill="none" stroke="#7D8BA0" stroke-width="7" stroke-dasharray="2 14" stroke-linecap="round" marker-end="url(#ah)"/>
+    </svg>
+    <div style="position:absolute;left:640px;top:362px;font-size:26px;font-weight:800;color:var(--ink2);background:var(--cream);padding:0 14px">回饋循環：判斷成為下一回合提問的依據</div>
+    <div class="row" style="position:absolute;left:0;right:0;bottom:6px;gap:22px">
+      <div class="card pink" style="flex:1;padding:16px 22px"><p style="margin:0;font-size:26px"><b class="pk">問題一</b>　需求 → 引導<br><span class="small">圖中由左至中的路徑</span></p></div>
+      <div class="card butter" style="flex:1;padding:16px 22px"><p style="margin:0;font-size:26px"><b class="bt">問題二</b>　處理回應、修正指令<br><span class="small">圖中的回饋循環</span></p></div>
+      <div class="card mint" style="flex:1;padding:16px 22px"><p style="margin:0;font-size:26px"><b class="mt">問題三</b>　特教專業的關鍵作用<br><span class="small">跨越整個架構</span></p></div>
+    </div>
+  </div>
+  
+  <aside class="notes"><p>研究架構從學生的學習需求出發。我以特教專業為核心，提供 AI 四類資訊：教學需求、實體材料規格、實際操作回饋、技術操作諮詢。</p><p>AI 產出或修改程式後，我實際列印、讓學生試用，再判斷採用、修正或捨棄；這個判斷又回到下一回合的提問。</p><p>三個待答問題的對應：問題一是由左到中的路徑；問題二是下方的回饋循環；問題三跨越整個架構。</p></aside>
+</section>
+
+<!-- 9 場域與試用 -->
+<section class="slide">
+  <div class="kicker">研究場域與試用</div>
+  <h2>從低年級<span class="hl">轉到</span>中年級</h2>
+  <p class="small" style="margin:-16px 0 18px">臺南市東區某國小資源班｜研究對象是研究者本人；學生操作只用來說明教材修正的原因</p>
+  <div class="row grow" style="gap:20px;align-items:stretch">
+    <div class="card pink" style="flex:1">
+      <h3><span class="chip pink" style="font-size:28px">5/8 低年級試用</span></h3>
+      <p style="margin:0 0 16px;font-size:31px">S1＋另 4 名低年級，共 5 人<br><span class="small">Gemini 階段版本・一課生字</span></p>
+      <p style="margin:0 0 10px;font-size:31px;font-weight:800" class="pk">結果未達預期：</p>
+      <ul class="clean" style="margin:0">
+        <li style="font-size:31px;margin-bottom:16px">精細動作未成熟，撕貼很慢</li>
+        <li style="font-size:31px;margin-bottom:16px">S1 反覆撕貼反而易有挫折情緒，也未解決書寫輸出困難</li>
+        <li style="font-size:31px;margin-bottom:0">學習單沒有合適的黏貼框</li>
+      </ul>
+    </div>
+    <div class="arrow" style="flex-direction:column;width:110px;font-size:22px;color:var(--ink2);text-align:center"><span style="font-size:60px;color:#9AA5B4">➜</span>轉給能力<br>較佳的<br>四年級</div>
+    <div class="card mint" style="flex:1">
+      <h3><span class="chip mint" style="font-size:28px">中年級試用（主要情境）</span></h3>
+      <p style="margin:0 0 16px;font-size:31px">S2–S5，四名四年級<br><span class="small">115 年 9–12 月・每週四操作貼紙</span></p>
+      <ul class="clean mint" style="margin:0">
+        <li style="font-size:31px;margin-bottom:16px">精細動作較成熟，能專心在「辨識部件、組成國字」</li>
+        <li style="font-size:31px;margin-bottom:16px">四人特質差異大 → <b>需要差異化</b></li>
+        <li style="font-size:31px;margin-bottom:0">試用進度：預計進行至第 12 課</li>
+      </ul>
+    </div>
+  </div>
+  
+  <aside class="notes"><p>場域是臺南市東區某國小資源班，我是資源班導師，目前教二年級與四年級。要強調：研究對象是我本人，學生的操作只用來說明教材為什麼修正，不評估學習成效。</p><p>5 月 8 日，我用 Gemini 階段的版本印了一課生字，給 S1 和另外四位低年級學生試用，結果不如預期：精細動作還不成熟、撕貼很慢；S1 在反覆撕貼的過程中反而容易出現挫折情緒，也沒有解決他國字書寫輸出的困難；學習單也沒有依貼紙尺寸設計黏貼框。</p><p>這讓我體會到：教材合不合適，也取決於學生當下有沒有能力操作它。所以轉給同樣有國字輸出困難、但能力較佳的四年級 S2 到 S5。四人特質差異很大，這也是後來加入差異化設計的背景。中年級試用預計進行至第 12 課。</p></aside>
+</section>
+
+<!-- 10 三階段 -->
+<section class="slide">
+  <div class="kicker">教材開發歷程</div>
+  <h2>開發<span class="hl">三階段</span></h2>
+  <div style="position:relative;flex:1">
+    <div class="tl-line" style="top:46px"></div>
+    <div class="grid3" style="position:relative;gap:34px">
+      <div>
+        <div class="center"><span class="num pink" style="width:92px;height:92px;font-size:24px;border:6px solid var(--cream)">4–5月</span></div>
+        <div class="card pink" style="margin-top:14px">
+          <h3 style="justify-content:space-between">Gemini <span class="chip pink">付費版</span></h3>
+          <div style="font-size:52px;font-weight:900;line-height:1.1" class="pk">27 <span style="font-size:28px">回合</span></div>
+          <p class="small" style="margin:2px 0 12px">4 月至 5 月上旬</p>
+          <ul class="clean" style="margin:0"><li style="font-size:27px;margin-bottom:6px">構想、初版開發</li><li style="font-size:27px;margin-bottom:6px">雙層貼紙設計</li><li style="font-size:27px;margin-bottom:0">列印校正</li></ul>
+        </div>
+      </div>
+      <div>
+        <div class="center"><span class="num sky" style="width:92px;height:92px;font-size:24px;border:6px solid var(--cream)">5–8月</span></div>
+        <div class="card sky" style="margin-top:14px">
+          <h3 style="justify-content:space-between">Claude <span class="chip sky">免費版</span></h3>
+          <div style="font-size:52px;font-weight:900;line-height:1.1" class="sk">8 <span style="font-size:28px">回合</span></div>
+          <p class="small" style="margin:2px 0 12px">5/12 至 8 月下旬</p>
+          <ul class="clean sky" style="margin:0"><li style="font-size:27px;margin-bottom:6px">列印穩定化</li><li style="font-size:27px;margin-bottom:6px">多人份列印</li><li style="font-size:27px;margin-bottom:0">分組學習單（低組／高組）</li></ul>
+        </div>
+      </div>
+      <div>
+        <div class="center"><span class="num mint" style="width:92px;height:92px;font-size:24px;border:6px solid var(--cream)">8–9月</span></div>
+        <div class="card mint" style="margin-top:14px">
+          <h3 style="justify-content:space-between">ChatGPT <span class="chip mint" style="font-size:20px">學校共用帳號</span></h3>
+          <div style="font-size:52px;font-weight:900;line-height:1.1" class="mt">31 <span style="font-size:28px">次修改</span></div>
+          <p class="small" style="margin:2px 0 12px">8/28 至 9/14</p>
+          <ul class="clean mint" style="margin:0"><li style="font-size:27px;margin-bottom:6px">貼紙規格調整</li><li style="font-size:27px;margin-bottom:6px">多人分行、隨機排列</li><li style="font-size:27px;margin-bottom:0">學習單反覆修改</li></ul>
+        </div>
+      </div>
+    </div>
+    <div class="row" style="position:absolute;left:0;right:0;bottom:0;justify-content:center;gap:16px;font-size:28px;font-weight:800;color:var(--ink2)">
+      <span>重點轉移：</span><span class="pk">印得準</span><span>→</span><span class="sk">教學好用</span><span>→</span><span class="mt">多課次、多學生使用</span>
+    </div>
+  </div>
+  
+  <aside class="notes"><p>Gemini 階段共 27 回合（4 月至 5 月上旬）：從構想開始，我選定實體貼紙後提出雙層設計，花最多時間在列印對位。這階段出現轉折——初期 AI 提方案，後來改由我提規格，AI 變成執行者。引導類型統計：教學 8、材料 3、測試 11、諮詢 5。</p><p>Claude 階段 8 回合（5/12 至 8 月下旬）：先處理列印跑位，再加入多人份列印；AI 提議三層次學習單，我依學生改成低組、高組兩種模式。</p><p>ChatGPT 階段（學校教師共用帳號）8/28 至 9/14 共 31 次修改；9/22 的缺件補字版本歸入收斂階段：重點變成多課次、多學生使用；學習單在 9/1 到 9/14 間修改 15 次，並加入隨機排列、語詞學習三層次。這階段對話大多無法找回，以 GitHub 版本紀錄重建。</p></aside>
+</section>
+
+<!-- 11 收斂 -->
+<section class="slide">
+  <div class="kicker">開發收斂</div>
+  <h2>9/22 後<span class="hl">停止擴充功能</span></h2>
+  <div style="position:relative;height:320px;margin-top:14px">
+    <div class="tl-line" style="top:44px"></div>
+    <div class="grid4" style="grid-template-columns:repeat(5,1fr);gap:16px;position:relative">
+      <div style="text-align:center"><span class="num mint" style="width:92px;height:92px;font-size:26px;border:6px solid var(--cream)">9/14</span><p style="margin:8px 0 0;font-size:29px;line-height:1.4"><b>ChatGPT 版</b><br>主要功能架構確立<br><span class="small">9535e22</span></p></div>
+      <div style="text-align:center"><span class="num" style="width:92px;height:92px;font-size:26px;border:6px solid var(--cream);background:#E6E9EE">9/22</span><p style="margin:8px 0 0;font-size:29px;line-height:1.4">ChatGPT Pro<br>試作「缺件補字」<br><span class="small">8e6bfd7</span></p></div>
+      <div style="text-align:center"><span class="num" style="width:92px;height:92px;font-size:26px;border:6px solid var(--cream);background:#E6E9EE">9/23</span><p style="margin:8px 0 0;font-size:29px;line-height:1.4">上傳 Claude 版<br>介面過於複雜<br><span class="small">2a57ee6</span></p></div>
+      <div style="text-align:center"><span class="num butter" style="width:92px;height:92px;font-size:26px;border:6px solid var(--cream)">9/25</span><p style="margin:8px 0 0;font-size:29px;line-height:1.4">還原為<br>9/14 版本<br><span class="small">99f4242</span></p></div>
+      <div style="text-align:center"><span class="num sky" style="width:92px;height:92px;font-size:26px;border:6px solid var(--cream)">9/28</span><p style="margin:8px 0 0;font-size:29px;line-height:1.4"><b>ChatGPT Pro</b><br>版面修正・定版<br><span class="small">9943494</span></p></div>
+    </div>
+  </div>
+  <div class="card butter formula" style="justify-content:center;padding:30px;margin-top:10px">
+    <span>最終版</span><span>＝</span>
+    <span class="box" style="border-color:var(--mint);background:var(--mint-l)">9/14 版</span><span>＋</span>
+    <span class="box" style="border-color:var(--sky);background:var(--sky-l)">9/28 版面修正</span>
+    <span style="font-size:26px;font-weight:700;color:var(--ink2)">（不含缺件補字）</span>
+  </div>
+  <div class="card" style="margin-top:28px;padding:24px 30px"><p style="margin:0;font-size:32px"><b>為什麼停？</b>功能越加越多、按鈕越來越多 → 對<b>初次使用的老師</b>是負擔</p></div>
+  
+  <aside class="notes"><p>9 月 22 日之後，我決定不再擴充功能。9/22 用個人 Pro 版帳號與 ChatGPT 試作缺件補字（8e6bfd7）；9/23 上傳 Claude 在缺件補字討論中產出的版本（2a57ee6），但它以 8 月的程式為基礎，ChatGPT 階段加的功能暫時消失，介面也太複雜。</p><p>9/25 我把程式還原為 9/14 的原本程式碼（99f4242），內容與 9/14 版（9535e22）完全相同。9/28 回到 9/14 版的程式碼，與 ChatGPT（個人 Pro 版帳號）協作加入一項版面修正（9943494）：原本網頁在 100% 縮放下，下方的列印與儲存圖片按鈕無法顯示，修正後展開列印輸出區即可向下捲動到底部按鈕。</p><p>所以最終版＝9/14 學校共用帳號 ChatGPT 協作的版本（9535e22）＋9/28 版面修正，不含缺件補字。停的理由：我是設計者所以不覺得難，但對第一次用的老師，按鈕太多會是負擔；缺件補字也可以另做成獨立教材。</p></aside>
+</section>
+
+<!-- 12 研究者角色與信實度 -->
+<section class="slide">
+  <div class="kicker">研究者角色與信實度</div>
+  <h2>五種角色・三種偏誤・<span class="hl">兩位諍友</span></h2>
+  <div class="row" style="gap:12px;margin-bottom:22px;flex-wrap:nowrap">
+    <span class="chip pink" style="font-size:27px;padding:10px 20px;flex:1">需求提出者</span>
+    <span class="chip butter" style="font-size:27px;padding:10px 20px;flex:1">規格提供者</span>
+    <span class="chip mint" style="font-size:27px;padding:10px 20px;flex:1">驗證者</span>
+    <span class="chip sky" style="font-size:27px;padding:10px 20px;flex:1">教學實踐者</span>
+    <span class="chip pink" style="font-size:27px;padding:10px 20px;flex:1">取捨決策者</span>
+  </div>
+  <div class="row" style="gap:24px">
+    <div class="card" style="flex:1.55;padding:20px 26px">
+      <h3 style="font-size:32px;margin-bottom:22px">可能偏誤 → 因應</h3>
+      <div style="display:grid;grid-template-columns:auto auto 1fr;gap:26px 14px;align-items:center;font-size:30px;line-height:1.4">
+        <b>事後回顧</b><span class="arrow" style="font-size:30px">→</span><span>以當下紀錄為主；無對照者標示「研究者回溯補述」</span>
+        <b>凸顯教師作用</b><span class="arrow" style="font-size:30px">→</span><span>同時記錄 AI 主動提出且被採用的建議</span>
+        <b>熟悉自己的工具</b><span class="arrow" style="font-size:30px">→</span><span>以初次使用教師的角度檢視介面</span>
+      </div>
+    </div>
+    <div class="card mint" style="flex:1;padding:20px 26px">
+      <h3 style="font-size:32px;margin-bottom:22px">諍友檢核（甲、乙）</h3>
+      <p style="margin:0 0 22px;font-size:29px;line-height:1.5"><b>甲・教學搭檔</b>（特教 20 年以上）<br><span class="small">學生需求判斷、差異化詮釋</span></p>
+      <p style="margin:0;font-size:29px;line-height:1.5"><b>乙・研究所同儕</b>（有碩論經驗）<br><span class="small">方法嚴謹性、抽檢編碼</span></p>
+    </div>
+  </div>
+  
+  <div class="card butter" style="margin-top:24px;text-align:center;font-size:30px;font-weight:800;padding:18px">另以<span class="mt">資料三角檢證</span>、<span class="pk">區分當下紀錄與事後詮釋</span>提升信實度</div>
+  <aside class="notes"><p>在協作中，我同時是需求提出者、規格提供者、驗證者、教學實踐者和取捨決策者，五個角色在每一回合交錯出現。</p><p>身兼設計者、實踐者、研究者，我意識到三種可能偏誤：一、事後回顧——以 AI 對話、GitHub、觀察紀錄等當下紀錄為主，沒有當下紀錄可對照的就標示「研究者回溯補述」；二、凸顯教師作用——同時記錄 AI 主動提出且被採用的建議，例如 Gemini 指出白底貼紙會遮住筆畫；三、熟悉自己的工具——用初次使用教師的角度檢視介面。</p><p>信實度採兩項作法：資料三角檢證，以及區分當下紀錄與事後詮釋。另外邀請兩位未參與開發的諍友，以「諍友檢核表：教材開發歷程之分析與詮釋」檢視分析與詮釋的合理性，作為三角檢證的依據：甲是我的教學搭檔，特教 20 年以上，看學生需求判斷與差異化設計的詮釋；乙是研究所同儕，看研究方法的嚴謹性，以及人機協作互動歷程的分類與詮釋。檢核表分四部分：引導類型分類檢核、詮釋合理性檢核、整體意見、研究者回應紀錄。</p></aside>
+</section>
+
+<!-- 13 資料與分析 -->
+<section class="slide">
+  <div class="kicker">資料蒐集與分析</div>
+  <h2>四類資料・<span class="hl">三層分析</span>對應三問</h2>
+  <div class="row grow" style="gap:30px">
+    <div style="flex:1.2;display:grid;grid-template-columns:1fr 1fr;gap:20px;align-content:start">
+      <div class="card sky" style="padding:22px 20px"><b style="font-size:29px;white-space:nowrap">AI 對話紀錄</b><p class="small" style="margin:6px 0 0;font-size:26px">Gemini／Claude<br>／ChatGPT</p></div>
+      <div class="card sky" style="padding:22px 20px"><b style="font-size:29px;white-space:nowrap">GitHub 版本紀錄</b><p class="small" style="margin:6px 0 0;font-size:26px">共 42 次修改</p></div>
+      <div class="card sky" style="padding:22px 20px"><b style="font-size:29px;white-space:nowrap">教學觀察紀錄</b><p class="small" style="margin:6px 0 0;font-size:26px">5/8；9–12 月</p></div>
+      <div class="card butter" style="padding:22px 20px"><b style="font-size:29px;white-space:nowrap">研究者省思札記</b><p class="small" style="margin:6px 0 0;font-size:26px">事後回顧<br>輔助詮釋</p></div>
+      <p class="small" style="grid-column:1/3;margin:6px 0 0;font-size:26px">前三類＝<b class="sk">當下紀錄</b>；札記＝<b class="bt">事後回顧</b><br>分析單位：Gemini、Claude 以「回合」；ChatGPT 以「一次修改」<br>另有<b>諍友檢核表</b>（甲、乙）</p>
+    </div>
+    <div style="flex:1.4;display:flex;flex-direction:column;gap:22px">
+      <div class="card pink row" style="align-items:center;gap:18px;padding:24px 24px">
+        <span class="chip pink" style="font-size:24px;flex:none">問題一</span>
+        <div><b style="font-size:31px">第一層：引導類型編碼</b><p class="small" style="margin:4px 0 0;font-size:26px">教學／材料／測試／諮詢，計次只呈現分布</p></div>
+      </div>
+      <div class="card butter row" style="align-items:center;gap:18px;padding:24px 24px">
+        <span class="chip butter" style="font-size:24px;flex:none">問題二</span>
+        <div><b style="font-size:31px">第二層：處理方式＋決策依據</b><p class="small" style="margin:4px 0 0;font-size:26px">直接採用／修正後採用／未採用／<br>開發後未使用或移除</p></div>
+      </div>
+      <div class="card mint row" style="align-items:center;gap:18px;padding:24px 24px">
+        <span class="chip mint" style="font-size:24px;flex:none">問題三</span>
+        <div><b style="font-size:31px">第三層：跨階段主題歸納</b><p class="small" style="margin:4px 0 0;font-size:26px">比較三階段 → 關鍵作用與實踐模式</p></div>
+      </div>
+      <p class="cite" style="margin:0">分析步驟參照林金定等人（2005）</p>
+    </div>
+  </div>
+  
+  <aside class="notes"><p>資料有四類：AI 對話紀錄、GitHub 版本紀錄（共 42 次修改，含建立儲存庫與 README 各一次）、教學觀察紀錄，這三類是當下紀錄；研究者省思札記是事後回顧，只作輔助詮釋。資料蒐集工具另外還有諍友檢核表（甲、乙）。AI 對話紀錄中，Gemini 27 回合；Claude 5 到 8 月 8 回合，9/22 到 9/25 另有討論缺件補字的 5 回合；ChatGPT 學校共用帳號的大段對話已無法讀取，以 GitHub 重建，9/14 後個人 Pro 版的對話完整留存，共 6 回合。另有其他教學網站的 GitHub 執行紀錄作為輔助資料，用來佐證工具轉換原因。</p><p>分析分三層：第一層把每一回合編成四種引導類型，回答問題一，計次只呈現分布、不做推論統計；第二層分析處理方式與決策依據（學生學習特質、實體材料條件、備課流程、其他使用者的操作負擔），回答問題二；第三層跨階段比較與主題歸納，回答問題三。分析步驟參照林金定等人（2005）。</p></aside>
+</section>
+
+<!-- 14 文獻分享 -->
+<section class="slide">
+  <div class="kicker">文獻分享</div>
+  <h2>生成式AI輔助快速設計之<span class="hl">後設認知歷程</span></h2>
+  <p class="small" style="margin:-18px 0 20px;padding-right:110px">陳璽任、陳語晨、林雅丰、楊佳翰（2025）。生成式AI輔助快速設計之後設認知歷程探討。<i>設計學報，30</i>(4)，45-64。<span class="chip butter" style="font-size:18px;padding:2px 12px">THCI 第一級</span></p>
+  <div class="grid3 grow">
+    <div class="card sky" style="padding:22px 24px">
+      <h3><span class="chip sky" style="font-size:28px">方法</span></h3>
+      <ul class="clean sky" style="margin:0"><li style="font-size:30px;margin-bottom:20px">質性個案研究</li><li style="font-size:30px;margin-bottom:20px">4 位工業設計碩士生</li><li style="font-size:30px;margin-bottom:20px">回溯式訪談；以設計階段＋後設認知編碼</li></ul>
+    </div>
+    <div class="card pink" style="padding:22px 24px">
+      <h3><span class="chip pink" style="font-size:28px">發現</span></h3>
+      <ul class="clean" style="margin:0"><li style="font-size:30px;margin-bottom:20px">AI 多用於探索、設計的<b>「發散」</b>任務</li><li style="font-size:30px;margin-bottom:20px">需專業判斷時，人保有較高自主性</li><li style="font-size:30px;margin-bottom:20px">形成<b>「高頻迭代」</b>，驅動設計、創造反思</li></ul>
+    </div>
+    <div class="card mint" style="padding:22px 24px">
+      <h3><span class="chip mint" style="font-size:28px">對本研究的啟示</span></h3>
+      <ul class="clean mint" style="margin:0"><li style="font-size:30px;margin-bottom:20px">需求→產出→試用→修正 ≈ 高頻迭代</li><li style="font-size:30px;margin-bottom:20px">專業判斷由人主導 ↔ 特教教師把關</li><li style="font-size:30px;margin-bottom:20px">參考編碼架構；<b>完整記錄 AI 版本</b></li></ul>
+    </div>
+  </div>
+  
+  <aside class="notes"><p>我選的文獻是陳璽任等人（2025），刊在 THCI 第一級的《設計學報》，也是三篇候選中最貼近本研究核心——教師與生成式 AI 協作歷程——的一篇。</p><p>方法：質性個案研究，分析 4 位工業設計研究所碩士生用生成式 AI 做快速設計的後設認知歷程，採回溯式訪談，以設計階段與後設認知編碼分析。</p><p>發現：生成式 AI 主要用在探索與設計階段的「發散」任務；需要專業知識或經驗判斷時，設計者仍保有較高自主性；AI 的資訊促使反覆測試、快速調整，形成「高頻迭代」，扮演「驅動設計行為」與「創造反思機會」的角色（頁 45、58–59）。</p><p>啟示：我的「提出需求、AI 產出、列印試用、再修正」與高頻迭代相近；「專業判斷仍由人主導」呼應特教教師把關；其編碼方式可作為分析對話紀錄的參考。該研究限制提到沒完整記錄 ChatGPT 版本（頁 59），提醒我要完整記錄各階段 AI 工具與版本。</p></aside>
+</section>
+
+<!-- 15 貢獻、進度、Q&A -->
+<section class="slide final" style="flex-direction:row;gap:30px;padding-right:600px">
+  <div style="flex:1;display:flex;flex-direction:column;min-width:0">
+    <div class="kicker">預期貢獻與進度</div>
+    <h2 style="margin-bottom:22px">預期貢獻・<span class="hl">目前進度</span></h2>
+    <div class="card pink" style="padding:24px 28px;margin-bottom:26px">
+      <ul class="clean" style="margin:0">
+        <li style="font-size:32px;margin-bottom:12px">把「教師引導 AI」的歷程<b>顯性化</b></li>
+        <li style="font-size:32px;margin-bottom:12px">歸納特教專業在協作中的<b>關鍵作用</b></li>
+        <li style="font-size:32px;margin-bottom:0">提供特教教師可參照的<b>實踐模式</b></li>
+      </ul>
+    </div>
+    <div class="card mint" style="padding:24px 28px">
+      <div style="display:grid;grid-template-columns:auto 1fr;gap:18px 16px;font-size:30px;line-height:1.4;align-items:center">
+        <span class="chip mint">完成</span><span>教材開發與定版（9/28）</span>
+        <span class="chip butter">進行中</span><span>中年級試用（9–12 月）・預計進行至第 12 課</span>
+        <span class="chip butter">進行中</span><span>資料分析、諍友檢視（至 116 年 1 月）</span>
+        <span class="chip sky">預計</span><span>論文撰寫與修改，116 年 1 月起・<br>預計 116 年 6 月前完成口試</span>
+      </div>
+    </div>
+  </div>
+  <div class="final-panel">
+    <svg class="final-art" viewBox="0 0 520 900" width="520" height="900" aria-hidden="true">
+      <g fill="none" stroke="rgba(255,255,255,.14)" stroke-width="1.5"><circle cx="470" cy="120" r="140"/><circle cx="470" cy="120" r="210"/><path d="M0 820 L520 600"/><path d="M0 880 L520 660"/></g>
+    </svg>
+    <div class="final-text">
+      <div style="font-size:72px;font-weight:900;line-height:1.15">謝謝聆聽</div>
+      <div class="final-rule"></div>
+      <div style="font-size:40px;font-weight:700;letter-spacing:.08em">Q &amp; A</div>
+    </div>
+  </div>
+  
+  <aside class="notes"><p>預期貢獻：第一，把「人引導機器」的歷程顯性化；第二，歸納特教專業在協作中發揮的關鍵作用；第三，提供其他特教教師可以參照的實踐模式——不是被 AI 取代，而是以特教專業引領 AI。</p><p>進度：教材已在 9/28 定版；中年級試用 9 到 12 月進行中，預計進行至第 12 課；資料整理分析與諍友檢視進行到 116 年 1 月；論文撰寫與修改從 116 年 1 月開始，預計 116 年 6 月前完成口試。</p><p>以上是我的報告，謝謝老師和同學，歡迎提問與指教。</p></aside>
+</section>
+
+<div class="foot" id="chrome"><button id="btnNotes" title="備忘稿（N）">N</button><button id="btnPrev" aria-label="上一頁">‹</button><span class="count">1 / 16</span><button id="btnNext" aria-label="下一頁">›</button></div>
+</div></div>
+<div id="rotate">橫放手機觀看效果更好 ⟳</div>
+<div id="notesPanel" aria-live="polite"></div>
+<div id="hint">← → / 點擊 / 滑動 換頁　·　N 備忘稿　·　F 全螢幕</div>
+<script src="assets/deck.js"></script>
+<a href="../" style="position:fixed;top:8px;left:10px;z-index:9999;font:13px sans-serif;color:#fff;background:rgba(20,40,80,.65);padding:4px 10px;border-radius:12px;text-decoration:none">← 回選單</a>
+</body>
+</html>
