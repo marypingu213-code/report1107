@@ -93,3 +93,18 @@ body.shot .foot .count{min-width:0}
 @media (prefers-reduced-motion:reduce){.slide{transition:none}}
 #deck.dark-foot .foot{color:#D3DCE7}
 #deck.dark-foot .foot button{background:transparent;border-color:rgba(255,255,255,.35);color:#D3DCE7}
+
+/* PDF 原文燈箱 */
+.pdfref{cursor:pointer;color:#1f5f73;text-decoration:underline dotted;text-underline-offset:4px;border-radius:4px;padding:0 3px;transition:background .15s}
+.pdfref:hover{background:rgba(31,95,115,.12)}
+.pdfref::after{content:" ↗";font-size:.8em}
+#pdfbox{position:fixed;inset:0;z-index:10000;background:rgba(10,18,32,.86);display:none;align-items:center;justify-content:center}
+#pdfbox.on{display:flex}
+#pdfbox .pb-inner{position:relative;width:90vw;max-height:92vh;background:#fff;border-radius:6px;padding:18px 22px 12px;box-shadow:0 10px 40px rgba(0,0,0,.5);display:flex;flex-direction:column}
+#pdfbox .pb-imgs{overflow:auto;display:flex;flex-direction:column;gap:14px;align-items:center}
+#pdfbox .pb-imgs img{width:100%;height:auto;border:1px solid #d8dde3}
+#pdfbox .pb-imgs img[src$="page1.png"]{width:min(100%,1300px)}
+#pdfbox .pb-cap{font:20px/1.4 serif;color:#33414f;padding-top:10px;text-align:right}
+#pdfbox .pb-x{position:absolute;top:-16px;right:-16px;width:38px;height:38px;border-radius:50%;border:none;background:#1d3557;color:#fff;font-size:24px;line-height:38px;cursor:pointer}
+.slide>.pdfthumb{position:absolute;right:96px;top:30px;width:150px;z-index:2;cursor:pointer;border:1px solid #c9d1da;box-shadow:0 2px 8px rgba(0,0,0,.15);background:#fff}
+.pdfthumb img{width:100%;display:block}.pdfthumb span{display:block;font-size:13px;text-align:center;color:#1f5f73;padding:2px 0}
