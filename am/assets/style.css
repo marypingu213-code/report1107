@@ -108,3 +108,14 @@ body.shot .foot .count{min-width:0}
 #pdfbox .pb-x{position:absolute;top:-16px;right:-16px;width:38px;height:38px;border-radius:50%;border:none;background:#1d3557;color:#fff;font-size:24px;line-height:38px;cursor:pointer}
 .slide>.pdfthumb{position:absolute;right:96px;top:30px;width:150px;z-index:2;cursor:pointer;border:1px solid #c9d1da;box-shadow:0 2px 8px rgba(0,0,0,.15);background:#fff}
 .pdfthumb img{width:100%;display:block}.pdfthumb span{display:block;font-size:13px;text-align:center;color:#1f5f73;padding:2px 0}
+
+/* 簡報計時器 */
+#talkTimer{position:fixed;top:8px;right:8px;z-index:9998;min-width:92px;padding:4px 10px 5px;border-radius:8px;background:rgba(29,53,87,.82);color:#fff;font-family:ui-monospace,Menlo,Consolas,monospace;text-align:right;cursor:pointer;user-select:none;-webkit-user-select:none;box-shadow:0 1px 4px rgba(0,0,0,.18);border-left:3px solid #2a9d8f;line-height:1.15}
+#talkTimer .tt-time{display:block;font-size:17px;font-weight:600;letter-spacing:.5px}
+#talkTimer .tt-sub{display:block;font:11px/1.3 sans-serif;opacity:.78}
+#talkTimer.paused{opacity:.75}
+#talkTimer.warn{background:rgba(176,112,10,.92);border-left-color:#f4c95d}
+#talkTimer.over{background:rgba(170,35,35,.92);border-left-color:#ffb3b3}
+body.shot #talkTimer{display:none}
+@media print{#talkTimer{display:none!important}}
+body.pdfexport #talkTimer,body.pdfexport .foot,body.pdfexport #hint,body.pdfexport .progress,body.pdfexport a[href="../"],body.pdfexport #rotate,body.pdfexport #notesPanel{display:none!important}
